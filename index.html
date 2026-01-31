@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--
+    RAMFI - Especialistas en Fijaciones Industriales
+    Version: 1.0
+    Última actualización: 2026-01-30
+    
+    IMPORTANTE PARA PRODUCCIÓN:
+    1. Configurar CSP (Content Security Policy) en el servidor
+    2. Habilitar HTTPS (SSL/TLS)
+    3. Configurar CORS si es necesario
+    4. Implementar backend para procesamiento de formularios
+    5. Actualizar número de WhatsApp real: +56 9 8666 1477
+    6. Actualizar datos de contacto reales
+    7. Comprimir archivos (minify)
+    8. Configurar caché del navegador
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Tags de Seguridad -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Meta Tags SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RAMFI SPA">
+    <meta name="keywords" content="fijaciones, pernos, tornillos, tuercas, anclajes, ferretería industrial, Chile">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="RAMFI - Especialistas en Fijaciones Industriales">
+    <meta property="og:description" content="Más de 15 años de experiencia en fijaciones industriales. Pernos, tornillos, tuercas, anclajes y más. Asesoría experta y entrega rápida.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAMFI - Especialistas en fijaciones industriales y domésticas. Pernos, tornillos, tuercas, anclajes y más. Asesoría experta y entrega rápida.">
+    <meta name="keywords" content="ferretería, fijaciones, pernos, tornillos, tuercas, anclajes, ferretería industrial">
+    <title>RAMFI - Especialistas en Fijaciones Industriales</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Logo esquina superior izquierda -->
+    <a href="#inicio" class="site-logo">
+        <img src="img/logo.jpg" alt="RAMFI SPA - Ramos Fierro Fijaciones">
+    </a>
+
+    <!-- Menú dropdown: botón arriba-derecha, enlaces caen hacia abajo -->
+    <nav class="radial-menu" id="radialMenu" aria-label="Menú principal">
+        <button class="radial-btn" id="radialBtn" aria-label="Abrir menú" aria-expanded="false">
+            <span class="radial-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="items-wrap">
+            <a href="#inicio"   class="radial-item" data-index="0"><span class="radial-label">Inicio</span></a>
+            <a href="#empresa"  class="radial-item" data-index="1"><span class="radial-label">Empresa</span></a>
+            <a href="#catalogo" class="radial-item" data-index="2"><span class="radial-label">Catálogo</span></a>
+            <a href="#ofertas"  class="radial-item" data-index="3"><span class="radial-label">Ofertas</span></a>
+            <a href="#contacto" class="radial-item" data-index="4"><span class="radial-label">Contacto</span></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content"><section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="highlight">Especialistas</span> en Fijaciones<br>
+                    para Todo Tipo de Proyectos
+                </h1>
+                <p class="hero-subtitle">
+                    Amplio stock de pernos, tornillos, tuercas, anclajes y fijaciones industriales. 
+                    Asesoría experta y entrega rápida para profesionales y particulares.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20necesito%20información%20sobre%20productos%20RAMFI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                    <a href="#catalogo" class="btn btn-secondary">
+                        <span>🔍 Ver Catálogo</span>
+                    </a>
+                </div>
+                
+                <!-- Benefits Cards -->
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📦</div>
+                        <h3>Amplio Stock</h3>
+                        <p>Miles de productos disponibles para entrega inmediata</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👨‍🔧</div>
+                        <h3>Asesoría Experta</h3>
+                        <p>Nuestro equipo te ayuda a elegir la fijación correcta</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🚚</div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Despacho eficiente a todo el país</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresa Section -->
+    <section id="empresa" class="section empresa">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Empresa</h2>
+                <p class="section-subtitle">Más de 15 años de experiencia en el rubro</p>
+            </div>
+            
+            <div class="empresa-content">
+                <div class="empresa-left">
+                    <div class="empresa-card">
+                        <h3>🏭 RAMFI - Ramos Fierro Fijaciones</h3>
+                        <p>
+                            En RAMFI somos especialistas en soluciones de fijación con más de 15 años de experiencia 
+                            en el mercado nacional. Nos dedicamos a la importación, distribución y venta de elementos 
+                            de fijación industrial y doméstica de la más alta calidad.
+                        </p>
+                    </div>
+                    
+                    <div class="empresa-card">
+                        <h4>🎯 Nuestra Misión</h4>
+                        <p>
+                            Proveer soluciones integrales de fijación que garanticen seguridad, durabilidad y 
+                            rendimiento óptimo en cada proyecto de nuestros clientes, respaldados por asesoría 
+                            técnica especializada y un servicio de excelencia.
+                        </p>
+                    </div>
+                    
+                    <div class="empresa-card">
+                        <h4>👁️ Nuestra Visión</h4>
+                        <p>
+                            Ser la empresa líder en el mercado de fijaciones en Chile, reconocida por la calidad 
+                            de nuestros productos, innovación constante y compromiso con la satisfacción de 
+                            nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="empresa-right">
+                    <div class="empresa-card valores-card">
+                        <h4>⭐ Valores Corporativos</h4>
+                        <ul class="valores-list">
+                            <li><strong>Calidad:</strong> Productos certificados y de marcas reconocidas</li>
+                            <li><strong>Confiabilidad:</strong> Cumplimiento garantizado en tiempos de entrega</li>
+                            <li><strong>Asesoría:</strong> Equipo técnico experto a su disposición</li>
+                            <li><strong>Innovación:</strong> Soluciones adaptadas a las nuevas tecnologías</li>
+                            <li><strong>Compromiso:</strong> Relaciones comerciales de largo plazo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empresa-stats">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10000+</div>
+                    <div class="stat-label">Productos en Stock</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Atención al Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo" class="section catalogo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Catálogo</h2>
+                <p class="section-subtitle">Amplia variedad de productos para todas sus necesidades</p>
+            </div>
+            
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="producto-icon">🔩</div>
+                    <h3>Pernos y Tornillos</h3>
+                    <p>Hexagonales, Allen, Autoroscantes, Métricos, Whitworth</p>
+                    <ul class="producto-specs">
+                        <li>Acero al carbono</li>
+                        <li>Acero inoxidable 304/316</li>
+                        <li>Galvanizados</li>
+                        <li>Todas las medidas</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Pernos%20y%20Tornillos.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-icon">⚙️</div>
+                    <h3>Tuercas</h3>
+                    <p>Hexagonales, Autofrenantes, Mariposa, Insertos</p>
+                    <ul class="producto-specs">
+                        <li>DIN 934, DIN 985</li>
+                        <li>Clase 8, Clase 10</li>
+                        <li>Zincadas y naturales</li>
+                        <li>Stock permanente</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Tuercas.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-icon">🔧</div>
+                    <h3>Anclajes</h3>
+                    <p>Mecánicos, Químicos, Expansión, Hormigón</p>
+                    <ul class="producto-specs">
+                        <li>Hilti, Fischer, Rawl</li>
+                        <li>Cargas certificadas</li>
+                        <li>Uso industrial</li>
+                        <li>Asesoría técnica</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Anclajes.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-icon">📏</div>
+                    <h3>Varillas Roscadas</h3>
+                    <p>Métricas y Whitworth, hasta 6 metros de largo</p>
+                    <ul class="producto-specs">
+                        <li>M6 hasta M36</li>
+                        <li>Acero grado 8.8</li>
+                        <li>Corte a medida</li>
+                        <li>Galvanizadas disponibles</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Varillas%20Roscadas.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-icon">🛡️</div>
+                    <h3>Arandelas</h3>
+                    <p>Planas, Presión, Seguridad, Especiales</p>
+                    <ul class="producto-specs">
+                        <li>DIN 125, DIN 127</li>
+                        <li>Grower, Belleville</li>
+                        <li>Acero y inoxidable</li>
+                        <li>Todas las medidas</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Arandelas.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-icon">🏗️</div>
+                    <h3>Fijaciones Especiales</h3>
+                    <p>Remaches, Prisioneros, Espárragos, Pasadores</p>
+                    <ul class="producto-specs">
+                        <li>Remaches pop</li>
+                        <li>Espárragos DIN 975</li>
+                        <li>Pasadores cónicos</li>
+                        <li>Soluciones personalizadas</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20cotizar%20Fijaciones%20Especiales.%20%C2%BFPuede%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="catalogo-footer">
+                <p><strong>📦 Despacho a todo Chile</strong> | <strong>💳 Todas las formas de pago</strong> | <strong>📄 Factura electrónica</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas Section -->
+    <section id="ofertas" class="ofertas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ofertas y Promociones</h2>
+                <p class="section-subtitle">Aprovecha nuestras promociones mensuales</p>
+            </div>
+            
+            <div class="ofertas-grid">
+                <div class="oferta-card destacada">
+                    <div class="oferta-badge">🔥 OFERTA DESTACADA</div>
+                    <h3>Pack Construcción Profesional</h3>
+                    <div class="oferta-precio">
+                        <span class="precio-antes">$89.990</span>
+                        <span class="precio-ahora">$64.990</span>
+                        <span class="descuento">28% OFF</span>
+                    </div>
+                    <ul class="oferta-incluye">
+                        <li>✅ 1kg Tornillos Autoperforantes 8x1"</li>
+                        <li>✅ 1kg Tornillos Yeso-cartón 6x1"</li>
+                        <li>✅ 100 Anclajes plásticos 6mm</li>
+                        <li>✅ Set Brocas para concreto</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20el%20Pack%20Construcción%20Profesional%20en%20oferta.%20¿Puede%20enviarme%20más%20información?" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="oferta-card">
+                    <div class="oferta-badge">⚡ PROMO</div>
+                    <h3>Combo Pernería Industrial</h3>
+                    <div class="oferta-precio">
+                        <span class="precio-antes">$129.990</span>
+                        <span class="precio-ahora">$99.990</span>
+                        <span class="descuento">23% OFF</span>
+                    </div>
+                    <ul class="oferta-incluye">
+                        <li>✅ 100 Pernos hexagonales M8x40</li>
+                        <li>✅ 100 Tuercas hexagonales M8</li>
+                        <li>✅ 200 Arandelas planas M8</li>
+                        <li>✅ 100 Arandelas de presión M8</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20el%20Combo%20Pernería%20Industrial%20en%20promo.%20¿Puede%20enviarme%20más%20información?" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="oferta-card">
+                    <div class="oferta-badge">💰 DESCUENTO</div>
+                    <h3>Kit Anclaje Hormigón</h3>
+                    <div class="oferta-precio">
+                        <span class="precio-antes">$45.990</span>
+                        <span class="precio-ahora">$34.990</span>
+                        <span class="descuento">24% OFF</span>
+                    </div>
+                    <ul class="oferta-incluye">
+                        <li>✅ 50 Anclajes mecánicos 10x80mm</li>
+                        <li>✅ Broca SDS-Plus 10mm</li>
+                        <li>✅ Manual de instalación</li>
+                        <li>✅ Plantilla de marcado</li>
+                    </ul>
+                    <a href="https://wa.me/56986661477?text=Hola%2C%20me%20interesa%20el%20Kit%20Anclaje%20Hormigón%20en%20descuento.%20¿Puede%20enviarme%20más%20información?" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:16px;height:16px;vertical-align:middle;margin-right:7px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>Cotiza por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="ofertas-condiciones">
+                <p>⏰ <strong>Ofertas válidas hasta fin de mes</strong> | Stock limitado | Precios incluyen IVA</p>
+                <p>📞 Consulta por descuentos especiales en compras al por mayor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos para ayudarte con tus proyectos</p>
+            </div>
+            
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <h3>📍 Información de Contacto</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <p>+56 2 1234 5678</p>
+                            <p>+56 9 8765 4321 (Ventas)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9cfdcd7cdd8caf9cbd8d4dfd097dad5">[email&#160;protected]</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff9c908b96859e9c9690919a8cbf8d9e929996d19c93">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🏢</div>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Av. Industrial 1234, Bodega 5</p>
+                            <p>Quilicura, Santiago - Chile</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 8:30 - 18:00 hrs</p>
+                            <p>Sábados: 9:00 - 14:00 hrs</p>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+                <div class="contacto-form">
+                    <h3>📝 Formulario de Contacto</h3>
+                    <form id="contact-form" method="post" action="#" autocomplete="on" novalidate>
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" autocomplete="name" name="nombre" required 
+                                   placeholder="Ingrese su nombre">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" autocomplete="organization" name="empresa" 
+                                   placeholder="Nombre de su empresa (opcional)">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" autocomplete="email" name="email" required 
+                                       placeholder="correo@ejemplo.cl">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" autocomplete="tel" name="telefono" required 
+                                       placeholder="+56 9 8666 1477">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="cotizacion">Solicitud de Cotización</option>
+                                <option value="consulta">Consulta Técnica</option>
+                                <option value="reclamo">Reclamo o Sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required 
+                                      placeholder="Describa su consulta o necesidad..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer-simple">
+        <div class="footer-content">
+            <p>© 2026 RAMFI - Todos los derechos reservados | Diseño y Desarrollo Web</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56986661477?text=Hola%2C%20necesito%20información%20sobre%20productos%20RAMFI" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:30px;height:30px;fill:#fff;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 50.3 77.2 122 108.1 17 7.5 30.3 12.1 40.6 15.5 17.1 5.6 32.6 4.8 44.9 2.9 13.5-2.1 41.8-17.1 47.7-33.6 5.9-16.5 5.9-30.6 4.1-33.6-1.7-2.8-6.4-4.5-13.5-8.1z"/></svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
